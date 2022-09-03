@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dequeue</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="boxes.css" />
+    
+
+ <link rel="stylesheet" href="vendor/css/normalize.css" />
+ <link rel="stylesheet" href="vendor/css/fontawesome.css" /> 
+
+		<link
+        href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+        rel="stylesheet"
+    />
+    <link 
+        href="https://fonts.googleapis.com/css?family=Livvic&display=swap"
+        rel="stylesheet"
+    />
+    <link 
+        href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" 
+        rel="stylesheet"
+    />
+
+<script src="jquery-1.7.2.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="jquery.ui.touch-punch.min.js"></script>
+<script src="jquery.alerts.js"></script>
+<script src="vendor/js/fontawesome.js"></script>	
+<script src="js/settings.js"></script> 
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/sidenav.css" type="text/css">
+<link rel="stylesheet" href="/css/description.css" type="text/css">
+<link rel="stylesheet" href="/css/vbuttons.css" type="text/css"/>
+<link rel="shortcut icon" type="image/png" href="/images/icons8-queue-48.png"/>
+       
+   
+
+<script type="text/javascript" src="../logging.js"></script>
+
+</head>
+
+
+  <body> 
+
+    <div id="settings">
+      <div class="menu-header">
+        <div id="close-menu">
+          <i class="fas fa-times"></i>
+        </div>
+        <div><h2>Menu</h2></div>
+      </div>
+  
+      <div class="settings-container">
+  
+        <div>
+          <a href="/html/index.html"><button>Home</button></a>
+        </div>
+  
+  
+          <div>
+            <a href="/Stack/Stack/stack_desc.html"><button>Stack</button></a>
+            <!-- <input type="number" placeholder="Miliseconds" /> -->
+          </div>
+    
+          <!-- <div> -->
+            <!-- <a href="/html/queues_dynamic_entries.html"><p>Queue</p></a> -->
+            <div class="dropdown">  
+              <button> Queue </button>  
+              <div class="dropdown-content">  
+              <a href="/html/Queue_desc.html"> FIFO Queue</a>  
+              <a href="/html/Dequeue_desc.html"> Deque</a>  
+              <a href="/Circular Queue/cqueue/Circular_Queue_desc.html">Circular Queue</a>
+                          <a href="/html/Priority_queue_desc.html">Priority Queue</a>   
+              </div>  
+              </div>  
+          <!--</div>-->
+  
+          <div class="dropdown">  
+            <button> Linked List</button>  
+            <div class="dropdown-content">  
+            <a href="/Linked-List-Visualization-master/Linked_list_desc.html">Singly Linked List</a>  
+               
+            </div>  
+            </div>  
+            <div>
+              <a href="/html/about2.html"><button>About Us</button></a>
+              
+            </div>
+                    
+                                        
+          <div class="error-message">
+            <p id="settings-error"></p>
+          </div>
+  
+          <div class="success">
+            <p id="succes"></p>
+          </div>
+    
+          <!-- <button id="save-settings">Save</button> -->
+      </div>			
+    </div> 
+    
+    
+
+<header>
+    <div class="header-container">
+         <div id="settings-menu">
+            <i class="fas fa-bars"></i>
+        </div> 
+        
+        <div>
+            <h1>Dequeue</h1>
+        </div>
+        
+
+        <div id= "start">
+            <a href="/html/Dequeue_desc.html" ><img src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v2.png"/></a>			
+        </div>  
+
+        <!-- <div id="theme-switcher">
+            <i class="fas fa-adjust"></i>
+        </div> -->
+    </div>
+    <div class="gradient-border"></div>
+</header>
+<main> 
+  <figure class="ds_image">
+  <img src="/images/Structure_definition-Deque.png" width="605" height="293" alt="Dequeue Image"><br>
+  <center><figcaption><b>Deque</b></figcaption></center>
+  </figure>
+  <div class="definition">
+      <ul type="disc">
+        <li>
+          <b><p>A deque (pronounced as ‘deck’ or ‘dequeue’) is a list in which the elements can be inserted or deleted at either end. It is also known as a head-tail linked list because elements can be added to or removed from either the front (head) or the back (tail) end. However, no element can be added and deleted from the middle.</p></b>
+        </li>
+      </ul>
+  </div>
+  <div class="description">
+    <ul type="disc">
+      <li>
+        <p>In a deque, two pointers are maintained, LEFT and RIGHT, which point to either end of the deque.</p>
+      </li>
+      <li>
+        <p>The elements in a deque extend from the LEFT end to the RIGHT end and since it is circular, Dequeue[N–1] is followed by Dequeue[0].</p>
+      </li>
+    </ul>
+    
+  </div>
+  </div>
+
+<div class="representation">
+  <ul type="disc">
+    <li>
+      There are two variants of a double-ended queue. They include:
+    </li>
+    <ol type="1">
+      <li>
+         Input restricted deque In this dequeue, insertions can be done only at one of the ends, while deletions can be done from both ends.
+      </li>
+      <li>
+        Output restricted deque In this dequeue, deletions can be done only at one of the ends, while insertions can be done on both ends.
+      </li>
+    </ol>
+  </ul>
+  
+  
+ 
+</div>
+<div class="variables">
+  <ul type="disc">
+  </ul>
+  
+</div>  
+<figure class="ds_app_image">
+  <img src="/images/palindrome-2.png" width="743" height="462" alt="Deque Application"><br>
+  <center><figcaption><b>Deque Application</b></figcaption></center>
+  </figure> 
+<div class="application">
+  <b>Application:</b>
+   <blockquote id="app">
+     <ul type="bullet">
+     <li><p>An internet browser’s history. Recently visited URLs ar supplementary to the front of the deque, and also the uniform resource locator at the rear of the deque is removed when some such range of insertions at the front.</p>
+     </li>
+     <li><p>Another common application of the deque is storing a computer code application’s list of undo operations.</p></li>
+     <li><p>Have you ever see Money-Control App, it’ll show the stocks you last visited, it’ll take away the stocks when a while and can add the most recent ones.</p></li>
+     <li><p>Since Deque supports each stack and queue operations, it is used as each</p></li>
+     </ul>
+    </blockquote>
+</div>      
+<div class="vbutton" align="center">
+  <a href="/html/dequeue.html">Visualise</a>
+</div>
+      
+  
+  
+
+
+
+</main>
+            
+<script src="/Linked-List-Visualization-master/vendor/js/fontawesome.js"></script>
+        <script src="/Linked-List-Visualization-master/js/main.js"></script>
+        <script src="/Linked-List-Visualization-master/js/settings.js"></script>
+
+    <link rel="stylesheet" href="/Linked-List-Visualization-master/css/responisve.css" />
+        <link rel="stylesheet" href="/Linked-List-Visualization-master/css/style.css" />
+  </body>
+
+</html>

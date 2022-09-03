@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    FIFO Queue Visualization.
+  </title>
+  <style>
+    table1,
+    tr {
+      border-collapse: collapse;
+      border: 2px solid black;
+      letter-spacing: 1px;
+      font-family: sans-serif;
+      font-size: 20px;
+      empty-cells: hide;
+      background-color: cyan;
+    }
+
+    table2 {
+      border: none;
+      letter-spacing: 1px;
+      font-family: sans-serif;
+      font-size: 20px;
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+  </style>
+  <link rel="stylesheet" href="/css/sidenav.css" type="text/css">
+  <style>
+    .submit-btn {
+      border-radius: 0px;
+      font-size: 1.0rem;
+      height: 50px;
+      width: 250px;
+      box-shadow: inset 0 2px 0 0 #50C878;
+      background: #57FEFF;
+    }
+
+    .create-task-btn:hover {
+      background: #1E90FF;
+    }
+
+    .create-task-btn:active {
+      background: #FF1493;
+      border-color: #FF00FF;
+    }
+  </style>
+
+  <style>
+    .visualization {
+      /*width: 1500px;*/
+      height: 200px;
+      /*border: 0px solid black;*/
+      /*margin: 50px;*/
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #heading {
+      background-color: rgba(0, 0, 0, 0.0);
+      ;
+    }
+  </style>
+  <link rel="shortcut icon" type="image/png" href="/images/icons8-queue-48.png"/>
+</head>
+
+<body>
+  <div id="settings">
+    <div class="menu-header">
+      <div id="close-menu">
+        <i class="fas fa-times"></i>
+      </div>
+      <div>
+        <h2>Menu</h2>
+      </div>
+    </div>
+
+    <div class="settings-container">
+
+      <div>
+        <a href="/html/index.html"><button>Home</button></a>
+      </div>
+
+
+      <div>
+        <a href="/Stack/Stack/index.html"><button>Stack</button></a>
+        <!-- <input type="number" placeholder="Miliseconds" /> -->
+      </div>
+
+      <!-- <div> -->
+      <!-- <a href="/html/queues_dynamic_entries.html"><p>Queue</p></a> -->
+      <div class="dropdown">
+        <button> Queue </button>
+        <div class="dropdown-content">
+          <a href="/html/queues_dynamic_entries.html"> FIFO Queue</a>
+          <a href="/html/dequeue.html"> Deque</a>
+          <a href="/Circular Queue/cqueue/CircularQueue.html">Circular Queue</a>
+          <a href="/html/priority_queue.html">Priority Queue</a>
+        </div>
+      </div>
+      <!--</div>-->
+
+      <div class="dropdown">
+        <button> Linked List</button>
+        <div class="dropdown-content">
+          <a href="/Linked-List-Visualization-master/index.html">Singly Linked List</a>
+          <!-- <a href="/Linked-List-Visualization-master/indexc.html">Circular Linked List</a> -->
+        </div>
+      </div>
+      <div>
+        <a href="/html/about2.html"><button>About Us</button></a>
+        
+      </div>
+
+
+      <div class="error-message">
+        <p id="settings-error"></p>
+      </div>
+
+      <div class="success">
+        <p id="succes"></p>
+      </div>
+
+      <!-- <button id="save-settings">Save</button> -->
+    </div>
+  </div>
+
+
+
+  <header>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <div class="header-container">
+      <div id="settings-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div>
+        <h1>Queue Visualization</h1>
+      </div>
+
+
+      <div id="start">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v2.png" / onClick="history.go(0);">
+      </div>
+
+      <!-- <div id="theme-switcher">
+            <i class="fas fa-adjust"></i>
+        </div> -->
+    </div>
+    <div class="gradient-border"></div>
+  </header>
+
+  <main>
+    <center>
+      <section class="errors">
+        <div class="error-message" style="text-align : center;font-size:25px">
+          <p id="error"></p>
+        </div>
+      </section>
+      <br><br><br><br><br>
+      <div class="visualization">
+        <table class="table1" height="30%" width="70%" border="2px"
+          style="text-align:center; table-layout:fixed; border: 0px solid black">
+          <tr id="myRow">
+            <center>
+
+            </center>
+          </tr>
+        </table>
+
+        <table class="table2" height="30%" width="70%" border="0"
+          style="text-align:center; table-layout:fixed; border: none">
+          <tr id="heading">
+          </tr>
+        </table>
+      </div>
+
+      <!-- <form> -->
+      <!-- <label style="font-size:20px" for="n">Enter length of queue:</label> -->
+
+      <!-- </form> -->
+
+      <section class="operations" >
+        <div class="wrapper">
+          <div style="margin-left : 250px; margin-right : 25px;">
+            <input type="number" id="n" name="n" placeholder="Enter length of queue" style="padding: 5px;
+                                                                                            border: none;
+                                                                                            display: block;
+                                                                                            margin: 0 auto;
+                                                                                            box-sizing: border-box;
+                                                                                          
+                                                                                            font-style: italic;
+                                                                                            width:250px;
+                                                                                            height : 50px;">
+          </div>
+          <div>
+            <button class="button" onclick="myFunction()">Enqueue</button>
+            <input type="number" maxlength=10 placeholder='Enter value to enqueue' id="q" name="q"
+              onfocus="this.value=''" class="in_field">
+          </div>
+          <!-- <br><br> -->
+          <div>
+            <button class="button" onclick="myFunction2()">Dequeue</button>
+          </div>
+          <!-- <br><br> -->
+          <!-- <button class="submit-btn" onClick="history.go(0);"> Refresh</button> -->
+
+        </div>
+      </section>
+
+
+      <!-- <form> -->
+      <!-- <label style="font-size:20px; width: 250px; position: absolute; left:240px;" for="q">Enter value to enqueue:</label> -->
+      <!-- <input type="number" maxlength=10 placeholder='Enter value to enqueue' style="font-size:20px; width: 250px; position: absolute; left:490px;" type="text" id="q" name="q" onfocus="this.value=''" class="in_field"><br><br> -->
+
+      <!-- </form> -->
+
+
+
+      <br><br><br><br><br>
+
+    </center>
+  </main>
+  <script src="/Linked-List-Visualization-master/vendor/js/fontawesome.js"></script>
+  <script src="/Linked-List-Visualization-master/js/main.js"></script>
+  <script src="/Linked-List-Visualization-master/js/settings.js"></script>
+
+  <link rel="stylesheet" href="/Linked-List-Visualization-master/css/responisve.css" />
+  <link rel="stylesheet" href="/Linked-List-Visualization-master/css/style.css" />
+  <script>
+    let errorCircle = '<i class="fas fa-exclamation-circle"></i> ';
+    i = 0;
+    function myFunction() {
+      n = document.getElementById('n').value;
+      if (i == n) {
+        //alert("Queue is full");
+        error.innerHTML = errorCircle + " Queue is Full ";
+        error.firstChild.style.animation = "highlightNode .8s ease";
+      }
+      else {
+        document.getElementById('n').disabled = true;
+        q = document.getElementById('q').value
+        if (q == "") {
+          error.innerHTML = errorCircle + " Enter proper value ";
+          error.firstChild.style.animation = "highlightNode .8s ease";
+        }
+        else {
+          var row = document.getElementById("myRow");
+          var x = row.insertCell(-1);
+          var head = document.getElementById("heading");
+          var h = head.insertCell(-1);
+          var colCount = document.getElementById("heading").cells.length;
+          x.innerHTML = q;
+          if (colCount == 1) {
+            a = document.getElementById('heading').cells[0];
+            a.innerHTML = "&#8593 <br> Front, Rear";
+          }
+          else {
+            a = document.getElementById('heading').cells[0];
+            a.innerHTML = "&#8593 <br> Front";
+            for (let i = 1; i < colCount; i++) {
+              y = document.getElementById('heading').cells[i];
+              y.innerHTML = "";
+            }
+            b = document.getElementById('heading').cells[colCount - 1];
+            b.innerHTML = "&#8593 <br> Rear";
+          }
+          i++;
+          error.innerHTML = errorCircle + " Enqueued " + q + " into the queue ";
+          error.firstChild.style.animation = "highlightNode .8s ease";
+          $("textarea[name=q]").val("");
+        }
+
+      }
+    }
+
+    function myFunction2() {
+      if (i == 0) {
+        //alert("Queue is empty");
+        error.innerHTML = errorCircle + " Queue is Empty ";
+        error.firstChild.style.animation = "highlightNode .8s ease";
+      }
+      else {
+        i--;
+        var row = document.getElementById("myRow");
+        var del = row.cells[0].innerHTML
+        row.deleteCell(0);
+        var head = document.getElementById("heading");
+        head.deleteCell(0);
+        //alert("Deleted " + del);
+        error.innerHTML = errorCircle + " Dequeued element from the queue is " + del;
+        error.firstChild.style.animation = "highlightNode .8s ease";
+        var colCount = document.getElementById("heading").cells.length;
+        if (colCount == 1) {
+          a = document.getElementById('heading').cells[0];
+          a.innerHTML = "&#8593 <br> Front, Rear";
+        }
+        else {
+          a = document.getElementById('heading').cells[0];
+          a.innerHTML = "&#8593 <br> Front";
+          for (let i = 1; i < colCount; i++) {
+            y = document.getElementById('heading').cells[i];
+            y.innerHTML = "";
+          }
+          b = document.getElementById('heading').cells[colCount - 1];
+          b.innerHTML = "&#8593 <br> Rear";
+        }
+
+      }
+    }
+  </script>
+
+</body>
+
+</html>

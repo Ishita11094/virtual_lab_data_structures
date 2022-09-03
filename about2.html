@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link
+			href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+			rel="stylesheet"
+		/>
+		<link 
+			href="https://fonts.googleapis.com/css?family=Livvic&display=swap"
+			rel="stylesheet"
+		/>
+		<link 
+			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" 
+			rel="stylesheet"
+		/>
+    <link rel="stylesheet" href="/Linked-List-Visualization-master/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/sidenav.css" type="text/css"/>
+    <link rel="stylesheet" href="css/responisve.css" />
+    <script src="/Linked-List-Visualization-master/js/settings.js"></script>
+    <script src="/Linked-List-Visualization-master/js/main.js"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato);
+        @import url(https://fonts.googleapis.com/css?family=Oswald);
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+        .snip1559 {
+          font-family: 'Lato', Arial, sans-serif;
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          margin: 50px;
+          min-width: 250px;
+          max-width: 310px;
+          width: 100%;
+          background-color: #ffffff;
+          color: #2B2B2B;
+          text-align: center;
+          font-size: 16px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .snip1559 * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        
+        .snip1559 .profile-image {
+          padding: 15% 10% 0;
+          height:200px;
+          
+        }
+        
+        .snip1559 .profile-image img {
+          max-width: 100%;
+          vertical-align: top;
+          position: relative;
+          border-radius: 50%;
+          max-width: 40%;
+        }
+        
+        .snip1559 figcaption {
+          padding: 5% 10% 15%;
+        }
+        
+        .snip1559 h3 {
+          font-family: 'Oswald';
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          margin: 3px 0;
+        }
+        
+        .snip1559 h5 {
+          font-weight: 400;
+          margin: 0;
+          text-transform: uppercase;
+          color: #888;
+          letter-spacing: 1px;
+        }
+        
+        .snip1559 .icons i {
+          color: #999;
+          display: inline-block;
+          margin-right: 5px;
+          font-size: 1.5em;
+        }
+        
+        .snip1559 .icons i:hover {
+          color: #555;
+        }
+        
+        .snip1559 .icons i a {
+          text-decoration: none;
+        }
+        
+          
+    </style>
+    <script>
+        $(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+    </script>
+    <link rel="shortcut icon" type="image/png" href="/images/icons8-more-info-64.png"/>  
+</head>
+<body style="background-image:url(/images/bg2.jpg); background-size:cover; background-repeat:no-repeat;">
+    <div id="settings">
+        <div class="menu-header">
+            <div id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <div><h2>Menu</h2></div>
+        </div>
+
+        <div class="settings-container">
+
+            <div>
+                <a href="/html/index.html"><button>Home</button></a>
+            </div>
+
+
+                <div>
+                    <a href="/Stack/Stack/index.html"><button>Stack</button></a>
+                    <!-- <input type="number" placeholder="Miliseconds" /> -->
+                </div>
+    
+                <!-- <div> -->
+                    <!-- <a href="/html/queues_dynamic_entries.html"><p>Queue</p></a> -->
+                    <div class="dropdown">  
+                        <button> Queue </button>  
+                        <div class="dropdown-content">  
+                        <a href="/html/queues_dynamic_entries.html"> FIFO Queue</a>  
+                        <a href="/html/dequeue.html"> Deque</a>  
+                        <a href="/Circular Queue/cqueue/CircularQueue.html">Circular Queue</a>
+                        <a href="/html/priority_queue.html">Priority Queue</a>  
+                        </div>  
+                        </div>  
+                <!--</div>-->
+
+                <div class="dropdown">  
+                    <button> Linked List</button>  
+                    <div class="dropdown-content">  
+                    <a href="/Linked-List-Visualization-master/index.html">Singly Linked List</a>  
+                    <!-- <a href="/Linked-List-Visualization-master/indexc.html">Circular Linked List</a>    -->
+                    </div>  
+                    </div>  
+                
+                                    
+                <div class="error-message">
+                    <p id="settings-error"></p>
+                </div>
+
+                <div class="success">
+                    <p id="succes"></p>
+                </div>
+    
+                <!-- <button id="save-settings">Save</button> -->
+        </div>			
+    </div> 
+
+    <header>
+           
+            <div id="settings-menu">
+               <i class="fas fa-bars"></i>
+           </div> 
+        <div style="height:60px; width:auto;">
+          <h1 style="color : white; text-align:center; padding-top :13px; vertical-align :middle;">About Us</h1>
+        </div>
+            
+            <!-- <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+                <li><a href="#">Maths</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul> -->
+         
+           <div style="background-color:white; width:auto; height:1px;"></div>
+    </header>
+    
+    <br><br><br><br>
+    <main>
+    <center>
+        <div style="height:50px; width: 200px; text-align:center; margin-bottom:10px; background-color:white; margin:0 auto; display:block;">
+            <h3 style="padding-top:15px;">STUDENTS</h3>
+            </div>
+    <div>
+        
+    <figure class="snip1559">
+        <div class="profile-image"><img src="/images/abhay_tie2.jpeg" alt="Abhay Gori" /></div>
+        <figcaption>
+          <h3>Abhay Gori</h3>
+          <h5>Web Developer</h5>
+          <p></p>
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="snip1559">
+        <div class="profile-image"><img src="/images/Ishita.jpeg" alt="Ishita Sharma" /></div>
+        <figcaption>
+          <h3>Ishita Sharma</h3>
+          <h5>Web Developer</h5>
+          <p></p>
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="snip1559">
+        <div class="profile-image"><img src="/images/zeel.jpeg" alt="Zeel Shah" /></div>
+        <figcaption>
+          <h3>Zeel Shah</h3>
+          <h5>Content Writer</h5>
+          <p></p>
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div style="margin-top:100px;">
+      <figure class="snip1559">
+        <div class="profile-image"><img src="/images/bala.jpeg" alt="Bala Abhishek" /></div>
+        <figcaption>
+          <h3>Bala Abhishek</h3>
+          <h5>Documentation</h5>
+          <p></p>
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="snip1559">
+        <div class="profile-image"><img src="/images/manoj2.jpeg" alt="Manojsinh Chauhan" /></div>
+        <figcaption>
+          <h3>Manojsinh Chauhan</h3>
+          <h5>Documentation</h5>
+          <p></p>
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <br><br><br>
+      <div style="background-color:white; width:auto; height:1px;"></div>
+      <br><br><br>
+      <div style="height:50px; width: 200px; text-align:center; margin-bottom:10px; background-color:white; margin:0 auto; display:block;">
+        <h3 style="padding-top:15px;">FACULTY</h3>
+        </div>
+
+      <div style="margin-top:100px;">
+        <figure class="snip1559">
+          <div class="profile-image"><img src="/images/shweta_mam.jpeg" alt="Shweta Patil" /></div>
+          <figcaption>
+            <h3>Mrs. Shweta Patil</h3>
+            <h5>Mentor</h5>
+            <p></p>
+            <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+              <a href="#"> <i class="ion-social-twitter"></i></a>
+              <a href="#"> <i class="ion-social-vimeo"></i></a>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="snip1559">
+          <div class="profile-image"><img src="/images/priyanka2.jpeg" alt="Priyanka Bhalerao" /></div>
+          <figcaption>
+            <h3>Mrs. Priyanka Bhalerao</h3>
+            <h5>Mentor</h5>
+            <p></p>
+            <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+              <a href="#"> <i class="ion-social-twitter"></i></a>
+              <a href="#"> <i class="ion-social-vimeo"></i></a>
+            </div>
+          </figcaption>
+        </figure>
+        </div>
+      
+      </center>
+      </main>
+      <script src="vendor/js/fontawesome.js"></script>
+		<script src="js/LinkedList.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/theme.js"></script>
+		<script src="js/settings.js"></script>
+</body>
+</html>
